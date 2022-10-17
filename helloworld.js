@@ -27,3 +27,8 @@ function ThisIsTheName(Signature){
    }
    
    console.log(Divide(20,10))
+
+   function helloName(name) {
+    console.log("Hello, " + name + ", I am node!");
+}
+helloName("Sam")
