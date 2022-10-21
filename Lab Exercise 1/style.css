@@ -1,13 +1,13 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    }
 
-body{
+
+body {
     height: 100vh;
     background: linear-gradient(
         #348de2,
         #3438de,        
     ) 0 100% no repeat;
+    background-size: 100% 50%;
+    box-sizing: border-box;
 }
+
+
