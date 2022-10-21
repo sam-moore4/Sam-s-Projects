@@ -47,3 +47,7 @@ button{
     outline: none;
     color: #ffffff;
 }
+
+#answer{
+    display: none;
+}
