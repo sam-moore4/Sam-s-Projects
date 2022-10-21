@@ -1,0 +1,7 @@
+.navbar-brand{
+    background-image:url("/assets/images/rollthedice_logo_color_anim_final_path.svg");
+    background-repeat:no-repeat;
+    background-position:10px;
+    padding:15px 15px 15px 65px;
+    background-size:44px
+}
