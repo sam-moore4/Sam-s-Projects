@@ -6,6 +6,7 @@ function rollDice() {
    let rolled = Math.floor(Math.random() * (max - min + 1)) + min;
     document.getElementById("total").innerHTML = ('You rolled a ' + " " + rolled)
     changeImg(rolled)
+    changePara(selectedValue)
 
 } 
   
@@ -15,5 +16,5 @@ function changeImg(rolled) {
 
 
 function changePara(selectedValue){
-document.getElementById("game").innerHTML = "Playing with" + selectedValue 
+    document.getElementById("game").innerHTML = "Playing with a " + " " + selectedValue +" sided dice."
 }
