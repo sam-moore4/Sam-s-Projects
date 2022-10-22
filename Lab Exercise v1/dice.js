@@ -15,5 +15,5 @@ function changeImg(rolled) {
 
 
 function changePara(selectedValue){
-document.getElementById("game").innerHTML = "Playing with" + document.getElementById("sidedDice").value + " Sided Dice"
+document.getElementById("game").innerHTML = "Playing with" + selectedValue 
 }
