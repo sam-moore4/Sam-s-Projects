@@ -10,12 +10,28 @@
 <body>
     
          <div class="container">
-            <p id="game"> Play with 6 Sided Dice </p>
+            <h2> ROLL THE DICE</h2>
+            <p id="choose"> Choose the dice: <form>
+                <select id="sidedDice" name = "sidedDice">
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                    <option value ="6">6</option>
+                    <option value ="7">7</option>
+                    <option value ="8">8</option>
+                    <option value ="9">9</option>
+                    <option value ="10">10</option>
+                    <option value ="11">11</option>
+                    <option value ="12">12</option>
+                </select>
+            </form>
+            <p id="game"> Playing with 6 Sided Dice </p>
             <div class="dice-wrapper">
                 <img src="/Lab Exercise v1/img/dice-01.png">
             </div>
             <p id="total"> CLICK BELOW TO PLAY </p>
-            <button onclick="diceSix()"> PLAY NOW </button>
+            <button onclick="rollDice()"> PLAY NOW </button>
         </div>
 
 <script src="dice.js"></script>
