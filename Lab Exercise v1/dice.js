@@ -3,11 +3,12 @@ function rollDice() {
     let selectedValue = document.getElementById("sidedDice").value;
     min = Math.ceil(1);
     max = Math.floor(selectedValue);
-    let x = Math.floor(Math.random() * (max - min + 1)) + min;
-    document.getElementById("total").innerHTML = ('You rolled a ' + " " + x)
+   let rolled = Math.floor(Math.random() * (max - min + 1)) + min;
+    document.getElementById("total").innerHTML = ('You rolled a ' + " " + rolled)
+    changeImg(rolled)
 
 } 
   
-function changeImg() {
-    
+function changeImg(rolled) {
+    document.getElementById("dicepic").src="/Lab Exercise v1/img/dice-0"+ rolled +".png"
 }
