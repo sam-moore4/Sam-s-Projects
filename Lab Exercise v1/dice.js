@@ -12,3 +12,8 @@ function rollDice() {
 function changeImg(rolled) {
     document.getElementById("dicepic").src="/Lab Exercise v1/img/dice-0"+ rolled +".png"
 }
+
+
+function changePara(selectedValue){
+document.getElementById("game").innerHTML = "Playing with" + document.getElementById("sidedDice").value + " Sided Dice"
+}
