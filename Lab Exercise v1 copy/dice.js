@@ -1,6 +1,6 @@
 // Function to generate random number 
 var x = diceSix();
-document.getElementById("answer").innerHTML = ('Dice Display is ' + " " + x)
+document.getElementById("answer").innerHTML = ('You rolled a ' + " " + x)
 
 function diceSix(min, max) { 
     min = Math.ceil(1);
