@@ -46,8 +46,9 @@ button{
     border: none;
     outline: none;
     color: #ffffff;
+    padding: 15px 0;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 5px;
 }
 
-#answer{
-    display: none;
-}
