@@ -56,17 +56,17 @@ fetch("https://v3.football.api-sports.io/fixtures?live=all", {
 
 .then(response => response.json().then(data => {
     var matchesList = data['response'];
-    var fixture = matchesList[0]['fixture'];
-    var goals = matchesList[0]['goals'];
-    var teams = matchesList[0]['teams'];
-    console.log(matchesList.length);
-   //Now let's set our first match
-   elapsedTime.innerHTML = fixture['status']['elapsed'] + "'";
-   homeTeamImage.src = teams['home']['logo'];
-   homeTeamName.innerHTML = teams['home']['name'];
-   awayTeamImage.src = teams['away']['logo'];
-   awayTeamName.innerHTML = teams['away']['name'];
-   lastMatchGoal.innerHTML = goals['home']+ " - " + goals['away'];
+//     var fixture = matchesList[0]['fixture'];
+//     var goals = matchesList[0]['goals'];
+//     var teams = matchesList[0]['teams'];
+//     console.log(matchesList.length);
+//    //Now let's set our first match
+//    elapsedTime.innerHTML = fixture['status']['elapsed'] + "'";
+//    homeTeamImage.src = teams['home']['logo'];
+//    homeTeamName.innerHTML = teams['home']['name'];
+//    awayTeamImage.src = teams['away']['logo'];
+//    awayTeamName.innerHTML = teams['away']['name'];
+//    lastMatchGoal.innerHTML = goals['home']+ " - " + goals['away'];
 
    for(var i = 1; i<matchesList.length;i++){
        addMatchTile(matchesList[i]);
