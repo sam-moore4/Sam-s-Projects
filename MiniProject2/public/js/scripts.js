@@ -25,9 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 
-fetch('https://www.balldontlie.io/api/v1/teams')
+fetch('/teams')
     .then((response) => response.json())
     .then(json => {
+        console.log(json)
         json.data.forEach(user => {
             const template = document.getElementById("news-template").content.cloneNode(true);
             template.querySelector('.news-title').innerText = user.full_name;
