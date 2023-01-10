@@ -112,7 +112,7 @@
                                         Feeling</a>
                                     </div>                           
                                     <div class="col-sm-2">
-                                        <button onclick="addPostItem()" class="btn btn-primary text-uppercase" style= "color: white;">Create Post →</button>
+                                        <button onclick="addPostItem(), postServer()" class="btn btn-primary text-uppercase" style= "color: white;">Create Post →</button>
                                     </div>
                                 </div>
                         </div>
@@ -178,7 +178,13 @@
         <!-- <script src="js/scripts.js"></script> -->
         <script>
 
-            //let post = ARRAY
+let post = [
+        {id: 1, title: 'JOKIC, MITCHELL NAMED PLAYERS OF THE WEEK', content:"Denver's 2-time Kia MVP and Cleveland's All-Star guard take home the honors for Week 9."},
+        {id: 2, title: 'LILLARD PASSES DREXLER AS BLAZERS SCORING LEADER', content:"Lillard, 32, is the only player in franchise history with six All-NBA honors"},
+        {id: 3, title: 'JOKIC DROPS 40 PTS, 27 REB and 10 AST, WHILST EMBIID CONTINUES TO STRUGGLE', content:"Jokic created a stat line yesterday to rival the great Wilt Chamberlain, whilst Embiid and the 76ers continue to struggle this season."}
+    ];
+        
+
 
     function addPostItem() {
         let postTitle = document.getElementById('post-title').value 
@@ -189,25 +195,18 @@
     }
     
     function addPostItems() {
+        console.log('refreshing news items')
         document.getElementById('post-list').innerHTML = '';
-        fetch('/posts')
-        .then((response) => response.json())
-        .then(json => {
-        console.log(json)
-        json.forEach(postItem => {
-            console.log('refreshing news items')
-            
 
-            // post.forEach((postItem) => {
-                const template = document.getElementById("post-template").content.cloneNode(true);
-                template.querySelector('.post-title').innerText = postItem.title;
-                template.querySelector('.post-content').innerText = postItem.content;
-                document.querySelector('#post-list').appendChild(template);
-            });
-    })
+        post.forEach((postItem) => {
+            const template = document.getElementById("post-template").content.cloneNode(true);
+            template.querySelector('.post-title').innerText = postItem.title;
+            template.querySelector('.post-content').innerText = postItem.content;
+            document.querySelector('#post-list').appendChild(template);
+        });
     }
 
-const intervalTimer = setInterval(addPostItems, 1000)
+const intervalTimer = setInterval(addPostItems, 5000)
 
 
 let user6 = window.localStorage.getItem('username')
